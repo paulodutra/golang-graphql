@@ -7,7 +7,6 @@ package graph
 import (
 	"context"
 	"fmt"
-
 	"github.com/paulodutra/golang-graphql/graph/model"
 )
 
@@ -20,7 +19,7 @@ func (r *mutationResolver) CreateCategory(ctx context.Context, input model.NewCa
 	return &model.Category{
 		ID: 			category.ID,
 		Name: 			category.Name, 
-		Description: 	&category.Description
+		Description: 	&category.Description,
 	}, nil
 }
 

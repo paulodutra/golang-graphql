@@ -23,5 +23,5 @@ func (c *Category) Create(name string, description string) (Category, error) {
 	if err != nil {
 		return Category{}, err
 	}
-	return Category{ID: id, Name: name: Description: description}, nil
+	return Category{ID: id, Name: name, Description: description}, nil
 }
