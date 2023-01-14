@@ -33,4 +33,34 @@ mutation createCategory {
   }
 }
 
+mutation createCourse {
+  createCourse(input: {name: "Java", description: "learning fundamentals of java", categoryId: "352f4af6-c317-4cff-bb01-c1b68799b0aa"}) {
+    id
+    name
+  }
+}
+
+query queryCategories {
+  categories {
+    id
+    name
+    description
+  }
+}
+
+query queryCouses {
+  courses {
+    id
+    name
+  }
+}
+
+
+```
+
+6. create table of courses:
+
+```
+sqlite3 data.db
+create table courses (id string, name string, description string, category_id string);
 ```
