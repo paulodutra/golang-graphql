@@ -48,12 +48,25 @@ query queryCategories {
   }
 }
 
+query queryCategoriesWithCourses {
+  categories {
+    id
+    name
+    courses {
+      id
+      name
+    }
+  }
+}
+
 query queryCouses {
   courses {
     id
     name
   }
 }
+
+
 
 
 ```
@@ -63,4 +76,11 @@ query queryCouses {
 ```
 sqlite3 data.db
 create table courses (id string, name string, description string, category_id string);
+```
+
+7. For generate the of model and types:
+
+```
+go run github.com/99designs/gqlgen generate
+
 ```
