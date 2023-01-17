@@ -66,7 +66,18 @@ query queryCouses {
   }
 }
 
-
+query queryCousesWithCategory {
+  courses {
+    id
+    name
+    description
+    category {
+      id
+      name
+      description
+    }
+  }
+}
 
 
 ```
